@@ -1,0 +1,66 @@
+/*
+ * This DPC showcases one Linux configuration for SerDes 0x2a_07
+ *
+ * Copyright 2016 Freescale Semiconductor, Inc.
+ */
+
+/dts-v1/;
+/* DPC */
+/ {
+	resources {
+		icid_pools {
+			icid_pool@1 {
+				num = <100>;
+				base_icid = <0>;
+			};
+		};
+	};
+	mc_general {
+		log {
+			mode = "LOG_MODE_ON";
+			level = "LOG_LEVEL_WARNING";
+		};
+		console {
+			mode = "CONSOLE_MODE_ON";
+			uart_id = <3>;
+		};
+	};
+	controllers {
+		qbman {
+			/* Transform 30 8-WQ channels into 120 2-WQ channels */
+			wq_ch_conversion = <30>;
+		};
+	};
+	board_info {
+		ports {
+			/* For QDS SerDes 0x2a_07: 8 SGMII ports.
+			 * The 5 XFIs are probed as fixed-links which is the default
+			 * in the DPC, so not representing those explicitly.
+			 */
+			mac@9 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@10 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@11 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@12 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@13 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@14 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@15 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@16 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+		};
+	};
+};

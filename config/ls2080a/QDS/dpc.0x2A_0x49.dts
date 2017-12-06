@@ -1,0 +1,58 @@
+/*
+ * This DPC showcases one Linux configuration for SerDes 0x2a_49, maximizing
+ * resources allotted to the Ethernet driver. This is by no means a necessity,
+ * the DPAA2 Linux Eth driver can work with fewer resources, albeit with lesser
+ * performance.
+ *
+ * Copyright 2016 Freescale Semiconductor, Inc.
+ */
+
+/dts-v1/;
+/* DPC */
+/ {
+	resources {
+		icid_pools {
+			icid_pool@1 {
+				num = <100>;
+				base_icid = <0>;
+			};
+		};
+	};
+	mc_general {
+		log {
+			mode = "LOG_MODE_ON";
+			level = "LOG_LEVEL_WARNING";
+		};
+		console {
+			mode = "CONSOLE_MODE_ON";
+			uart_id = <3>;
+		};
+	};
+	controllers {
+		qbman {
+			/* Transform enough 20-WQ channela into 100 80-WQ channels */
+			wq_ch_conversion = <20>;
+		};
+	};
+	board_info {
+		/* For RDB SerDes 0x2a_41 */
+		ports {
+			/* For QDS SerDes 0x2a_49: 4 SGMII ports.
+			 * The 8 XFIs are probed as fixed-links which is the default
+			 * in the DPC, so not representing those explicitly.
+			 */
+			mac@9 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@10 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@11 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			mac@12 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+		};
+	};
+};
