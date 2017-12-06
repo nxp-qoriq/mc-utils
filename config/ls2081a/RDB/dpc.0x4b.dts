@@ -63,22 +63,4 @@
 			wq_ch_conversion = <32>;
 		};
 	};
-	board_info {
-		/* For RDB SerDes 0x2a_41 */
-		ports {
-			/* AQR PHYs */
-			mac@5 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-			mac@6 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-			mac@7 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-			mac@8 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-		};
-	};
 };

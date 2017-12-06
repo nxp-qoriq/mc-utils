@@ -1,5 +1,4 @@
 /*
- * Copyright 2014-2016 Freescale Semiconductor, Inc.
  * Copyright 2017 NXP
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,8 +26,8 @@
  */
 
 /*
- * "Bootstrap DPL" for ls2085a RDB boards featuring SerDes 0x2A_0x41.
- * This DPL defines one network interface mapped on the ETH0 copper port.
+ * "Bootstrap DPL" for ls2081a RDB boards featuring SerDes 0x4b.
+ * This DPL defines one network interface mapped on the ETH0 optical port.
  * This together with the available DPMCP objects should be enough to boot Linux
  * and to allow the dynamic addition of other objects to the Linux container,
  * using the 'restool' utility.
@@ -37,17 +36,18 @@
 / {
 	dpl-version = <10>;
 	/*****************************************************************
-         * Containers
-         *****************************************************************/
+	 * Containers
+	 *****************************************************************/
 	containers {
 		dprc@1 {
+			compatible = "fsl,dprc";
 			parent = "none";
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED", "DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
 			objects {
 				/* ------------- MACs --------------*/
 				obj_set@dpmac {
 					type = "dpmac";
-					ids = <1 2 3 4 5 6 7 8>;
+					ids = <1 2 3 4>;
 				};
 
 				/* ------------ DPNIs --------------*/
@@ -86,8 +86,8 @@
 	};
 
 	/*****************************************************************
-         * Objects
-         *****************************************************************/
+	 * Objects
+	 *****************************************************************/
 	objects {
 
 		/* ------------ DPNI --------------*/
@@ -99,124 +99,148 @@
 
 		/* ------------ DPBP --------------*/
 		dpbp@0 {
+			compatible="fsl,dpbp";
 		};
 
 		/* ------------ DPIO --------------*/
 		dpio@0 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@1 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@2 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@3 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@4 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@5 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@6 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@7 {
+			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 
 		/* ------------ DPMAC --------------*/
-		/* For SerDes 0x2A_0x41, DPMACs 1-4 are mapped to the optical
-		 * PHYs while DPMACs 5-8 are mapped to the Cu PHYs.
+		/* For SerDes 0x4b, DPMACs 1-4 are mapped to the optical PHYs.
 		 * Object IDs are relevant, as the MC firmware currently uses
 		 * them to identify the DPMACs directly, so dpmac@X is actually
 		 * DPMAC#X.
 		 */
 		dpmac@1 {
+			compatible = "fsl,dpmac";
 		};
 		dpmac@2 {
+			compatible = "fsl,dpmac";
 		};
 		dpmac@3 {
+			compatible = "fsl,dpmac";
 		};
 		dpmac@4 {
-		};
-		dpmac@5 {
-		};
-		dpmac@6 {
-		};
-		dpmac@7 {
-		};
-		dpmac@8 {
+			compatible = "fsl,dpmac";
 		};
 
 		/* ------------ DPMCP --------------*/
 		dpmcp@1 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@2 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@3 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@4 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@5 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@6 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@7 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@8 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@9 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@10 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@11 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@12 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@13 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@14 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@15 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@16 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@17 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@18 {
+			compatible="fsl,dpmcp";
 		};
 		dpmcp@19 {
+			compatible="fsl,dpmcp";
 		};
 
 		/* ------------ DPCON --------------*/
 		dpcon@0 {
+			compatible="fsl,dpcon";
 			num_priorities=<2>;
 		};
 
 		/* ------------ DPRTC --------------*/
 		dprtc@0 {
+			compatible="fsl,dprtc";
 		};
 	};
 
 	/*****************************************************************
-         * Connections
-         *****************************************************************/
+	 * Connections
+	 *****************************************************************/
 	connections {
 		connection@0{
-			/* First copper port (ETH0 on the RDB chassis) */
 			endpoint1 = "dpni@0";
-			endpoint2 = "dpmac@5";
+			endpoint2 = "dpmac@1";
 		};
 	};
 };
