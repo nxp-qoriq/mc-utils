@@ -27,9 +27,9 @@
  */
 
 /*
- * This DPL showcases one Linux configuration for SerDes 0x2a_07
- *
+ * This DPL showcases one Linux configuration for SerDes 0x2a_0x07.
  */
+
 /dts-v1/;
 / {
 	/*****************************************************************

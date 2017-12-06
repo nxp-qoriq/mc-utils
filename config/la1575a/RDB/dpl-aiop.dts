@@ -27,7 +27,6 @@
 /dts-v1/;
 
 / {
-
 	containers {
 
 		dprc@1 {

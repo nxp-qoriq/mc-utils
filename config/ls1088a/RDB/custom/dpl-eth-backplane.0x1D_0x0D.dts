@@ -27,11 +27,12 @@
  */
 
 /*
- * "Bootstrap DPL" for ls1088a featuring SerDes 0x1D_0x0D.
+ * "Bootstrap DPL" for ls1088a featuring SerDes 0x1D_0x0D with backplane support.
  * This together with the available DPMCP objects should be enough to boot Linux
  * and to allow the dynamic addition of other objects to the Linux container,
  * using the 'restool' utility.
  */
+
 /dts-v1/;
 / {
 	dpl-version = <10>;

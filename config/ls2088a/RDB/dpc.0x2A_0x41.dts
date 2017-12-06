@@ -24,6 +24,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
+/*
+ * This DPC showcases one Linux configuration for SerDes 0x2A_0x41, maximizing
+ * resources allotted to the Ethernet driver. This is by no means a necessity,
+ * the DPAA2 Linux Eth driver can work with fewer resources, albeit with lesser
+ * performance.
+ */
+
 /dts-v1/;
 /* DPC */
 / {

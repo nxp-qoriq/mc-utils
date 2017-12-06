@@ -24,8 +24,12 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
+/*
+ * This DPC showcases one Linux configuration for SerDes 0x4D_0x57.
+ */
+
 /dts-v1/;
-/* DPC */
 / {
 	resources {
 		icid_pools {
@@ -65,7 +69,7 @@
 	};
 	board_info {
 		ports {
-			/* For QDS SerDes 0x4d_57: 4 SGMII ports. */
+			/* For QDS SerDes 0x4d_0x57: 4 SGMII ports. */
 			mac@3 {
 				link_type = "MAC_LINK_TYPE_FIXED";
 			};

@@ -24,8 +24,13 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
+/*
+ * This DPC showcases one Linux configuration for SerDes 0x2A_0x41 for ADKs
+ * with increased BMAN buffers.
+ */
+
 /dts-v1/;
-/* DPC */
 / {
 	resources {
 		icid_pools {

@@ -27,11 +27,10 @@
  */
 
 /*
- * This DPC showcases one Linux configuration for SerDes 0x2a_07
- *
+ * This DPC showcases one Linux configuration for SerDes 0x2a_0x07.
  */
+
 /dts-v1/;
-/* DPC */
 / {
 	resources {
 		icid_pools {

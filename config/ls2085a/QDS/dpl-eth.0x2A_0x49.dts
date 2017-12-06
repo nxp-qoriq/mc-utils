@@ -29,6 +29,7 @@
 /*
  * This DPL showcases one basic Linux configuration for SerDes 0x2A_0x49
  */
+
 /dts-v1/;
 / {
 	dpl-version = <10>;

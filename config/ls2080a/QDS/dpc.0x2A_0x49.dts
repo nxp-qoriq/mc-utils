@@ -31,10 +31,9 @@
  * resources allotted to the Ethernet driver. This is by no means a necessity,
  * the DPAA2 Linux Eth driver can work with fewer resources, albeit with lesser
  * performance.
- *
  */
+
 /dts-v1/;
-/* DPC */
 / {
 	resources {
 		icid_pools {

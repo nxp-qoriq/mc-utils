@@ -33,8 +33,8 @@
  * and to allow the dynamic addition of other objects to the Linux container,
  * using the 'restool' utility.
  */
+
 /dts-v1/;
-/* DPC */
 / {
 	resources {
 		icid_pools {
