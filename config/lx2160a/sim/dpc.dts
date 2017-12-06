@@ -1,5 +1,4 @@
 /*
- * Copyright 2016 Freescale Semiconductor, Inc.
  * Copyright 2017 NXP
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,67 +30,56 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
-/*
- * This DPC showcases one Linux configuration for SerDes 0x2a_49, maximizing
- * resources allotted to the Ethernet driver. This is by no means a necessity,
- * the DPAA2 Linux Eth driver can work with fewer resources, albeit with lesser
- * performance.
- */
+ 
 /dts-v1/;
-/* DPC */
+
 / {
-	resources {
-		icid_pools {
-			icid_pool@1 {
-				num = <100>;
-				base_icid = <0>;
-			};
-		};
-	};
+
 	mc_general {
+
 		log {
 			mode = "LOG_MODE_ON";
-			level = "LOG_LEVEL_WARNING";
+			level = "LOG_LEVEL_INFO";
 		};
+
 		console {
 			mode = "CONSOLE_MODE_ON";
-			uart_id = <3>;
+			uart_id = <0x2>;
 		};
 	};
+
 	aiop {
+
 		log {
-			mode = "LOG_MODE_ON";
+			mode = "LOG_MODE_OFF";
 		};
+
 		console {
-			mode = "CONSOLE_MODE_ON";
-			uart_id = <4>;
+			mode = "CONSOLE_MODE_OFF";
+			uart_id = <0x4>;
 		};
 	};
+
+	resources {
+
+		icid_pools {
+
+			icid_pool@1 {
+				num = <0x64>;
+				base_icid = <0x0>;
+			};
+		};
+	};
+
 	controllers {
+
 		qbman {
-			/* Transform this number of 8-WQ channels into four times
-			 * as many 2-WQ channels. This allows the creation of a
-			 * larger number of DPCONs.
-			 */
-			wq_ch_conversion = <54>;
+			fbpr_size_kb = <0x2000>;
+			pfdr_size_kb = <0x800>;
+			wq_ch_conversion = <0x18>;
 		};
 	};
+
 	board_info {
-		ports {
-			/* For QDS SerDes 0x2a_49: 4 SGMII ports. */
-			mac@9 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-			mac@10 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-			mac@11 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-			mac@12 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-		};
 	};
 };
