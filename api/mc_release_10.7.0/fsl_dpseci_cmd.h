@@ -97,6 +97,8 @@ struct dpseci_cmd_create {
 	uint8_t num_rx_queues;
 	uint8_t pad[6];
 	uint32_t options;
+	uint32_t pad2;
+	uint8_t priorities2[8];
 };
 
 struct dpseci_cmd_destroy {
