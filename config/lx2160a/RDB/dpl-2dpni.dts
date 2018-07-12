@@ -1,0 +1,222 @@
+/*
+ * Copyright 2018 NXP
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *   * Redistributions of source code must retain the above copyright
+ *     notice, this list of conditions and the following disclaimer.
+ *   * Redistributions in binary form must reproduce the above copyright
+ *     notice, this list of conditions and the following disclaimer in the
+ *     documentation and/or other materials provided with the distribution.
+ *   * Neither the name of the above-listed copyright holders nor the
+ *     names of any contributors may be used to endorse or promote products
+ *     derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ * Data Path Layout for lx2160a boards.
+ * This DPL defines all the necessary DPAA2 objects for the creation of
+ * 2 network interfaces connected to each other.
+ */
+
+/dts-v1/;
+
+/ {
+	dpl-version = <0xa>;
+	/*****************************************************************
+	 * Containers
+	 *****************************************************************/
+	containers {
+		dprc@1 {
+			parent = "none";
+			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED", "DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
+			objects {
+				/* ------------ DPNIs --------------*/
+				obj_set@dpni {
+					type = "dpni";
+					ids = <0x0 0x1>;
+				};
+
+				/* ------------ DPBPs --------------*/
+				obj_set@dpbp {
+					type = "dpbp";
+					ids = <0x0 0x1>;
+				};
+
+				/* ------------ DPIOs --------------*/
+				obj_set@dpio {
+					type = "dpio";
+					ids = <0x0 0x1 0x2 0x3 0x4 0x5 0x6 0x7>;
+				};
+
+				/* ------------ DPMCPs --------------*/
+				obj_set@dpmcp {
+					type = "dpmcp";
+					ids = <0x1 0x2 0x3 0x4 0x5 0x6 0x7 0x8 0x9 0xa 0xb 0xc 0xd 0xe 0xf 0x10 0x11 0x12 0x13>;
+				};
+
+				/* ------------ DPCON --------------*/
+				obj_set@dpcon {
+					type = "dpcon";
+					ids = <0x0 0x1>;
+				};
+			};
+		};
+	};
+
+	/*****************************************************************
+	 * Objects
+	 *****************************************************************/
+	objects {
+
+		/* ------------ DPNI --------------*/
+		dpni@0 {
+			options = "";
+			num_queues = <0x1>;
+			num_tcs = <0x1>;
+		};
+
+		dpni@1 {
+			options = "";
+			num_queues = <0x1>;
+			num_tcs = <0x1>;
+		};
+
+		/* ------------ DPBP --------------*/
+		dpbp@0 {
+		};
+
+		dpbp@1 {
+		};
+
+		dpio@0 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		/* ------------ DPIO --------------*/
+		dpio@1 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@2 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@3 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@4 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@5 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@6 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@7 {
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		/* ------------ DPMCP --------------*/
+		dpmcp@1 {
+		};
+
+		dpmcp@2 {
+		};
+
+		dpmcp@3 {
+		};
+
+		dpmcp@4 {
+		};
+
+		dpmcp@5 {
+		};
+
+		dpmcp@6 {
+		};
+
+		dpmcp@7 {
+		};
+
+		dpmcp@8 {
+		};
+
+		dpmcp@9 {
+		};
+
+		dpmcp@10 {
+		};
+
+		dpmcp@11 {
+		};
+
+		dpmcp@12 {
+		};
+
+		dpmcp@13 {
+		};
+
+		dpmcp@14 {
+		};
+
+		dpmcp@15 {
+		};
+
+		dpmcp@16 {
+		};
+
+		dpmcp@17 {
+		};
+
+		dpmcp@18 {
+		};
+
+		dpmcp@19 {
+		};
+
+		/* ------------ DPCON --------------*/
+		dpcon@0 {
+			num_priorities = <0x2>;
+		};
+
+		dpcon@1 {
+			num_priorities = <0x2>;
+		};
+	};
+
+	/*****************************************************************
+	 * Connections
+	 *****************************************************************/
+	connections {
+		connection@1 {
+			endpoint1 = "dpni@0";
+			endpoint2 = "dpni@1";
+		};
+	};
+};
