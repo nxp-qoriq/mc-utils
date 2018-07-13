@@ -25,12 +25,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*
- * Data Path Layout for lx2160a boards.
- * This DPL defines all the necessary DPAA2 objects for the creation of
- * 2 network interfaces connected to each other.
- */
-
 /dts-v1/;
 
 / {
