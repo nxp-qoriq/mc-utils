@@ -50,13 +50,13 @@
 
 		log {
 			mode = "LOG_MODE_ON";
-			level = "LOG_LEVEL_WARN";
+			level = "LOG_LEVEL_WARNING";
 		};
 
 		console {
 			mode = "CONSOLE_MODE_OFF";
 			uart_id = <0x4>;
-			level = "LOG_LEVEL_WARN";
+			level = "LOG_LEVEL_WARNING";
 		};
 	};
 
