@@ -26,7 +26,7 @@
  */
 
 /*
- * Data Path Layout for lx2160a boards featuring Serdes1 protocol 0x7.
+ * Data Path Layout for lx2160a boards featuring Serdes1 protocols 7 and 8.
  */
 
 /dts-v1/;
