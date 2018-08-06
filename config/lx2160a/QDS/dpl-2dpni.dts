@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 NXP
+ * Copyright 2018 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -26,89 +26,79 @@
  */
 
 /*
- * "Bootstrap DPL" for lx2160a SIM.
- * This DPL defines one network interface mapped on the dpmac.3 port and two
- * other network interfaces connected in loopback mode.
+ * Data Path Layout for lx2160a boards.
+ * This DPL defines all the necessary DPAA2 objects for the creation of
+ * 2 network interfaces connected to each other.
  */
 
 /dts-v1/;
+
 / {
 	dpl-version = <0xa>;
-
+	/*****************************************************************
+	 * Containers
+	 *****************************************************************/
 	containers {
-
 		dprc@1 {
 			parent = "none";
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED", "DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
-
 			objects {
-
+				/* ------------ DPNIs --------------*/
 				obj_set@dpni {
 					type = "dpni";
-					ids = <0 1 2>;
+					ids = <0x0 0x1>;
 				};
 
-				obj_set@dpmac {
-					type = "dpmac";
-					ids = <3>;
-				};
-
+				/* ------------ DPBPs --------------*/
 				obj_set@dpbp {
 					type = "dpbp";
-					ids = <0 1 2>;
+					ids = <0x0 0x1>;
 				};
 
+				/* ------------ DPIOs --------------*/
 				obj_set@dpio {
 					type = "dpio";
-					ids = <0 1 2 3 4 5 6 7>;
+					ids = <0x0 0x1 0x2 0x3 0x4 0x5 0x6 0x7>;
 				};
 
+				/* ------------ DPMCPs --------------*/
 				obj_set@dpmcp {
 					type = "dpmcp";
-					ids = <1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19>;
+					ids = <0x1 0x2 0x3 0x4 0x5 0x6 0x7 0x8 0x9 0xa 0xb 0xc 0xd 0xe 0xf 0x10 0x11 0x12 0x13>;
 				};
 
+				/* ------------ DPCON --------------*/
 				obj_set@dpcon {
 					type = "dpcon";
-					ids = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23>;
+					ids = <0x0 0x1>;
 				};
 			};
 		};
 	};
 
+	/*****************************************************************
+	 * Objects
+	 *****************************************************************/
 	objects {
 
+		/* ------------ DPNI --------------*/
 		dpni@0 {
-			options = "DPNI_OPT_HAS_KEY_MASKING";
-			num_queues = <8>;
-			num_tcs = <1>;
-			fs_entries = <16>;
-		}; 
-
-		dpni@1 {
-			options = "DPNI_OPT_HAS_KEY_MASKING";
-			num_queues = <8>;
-			num_tcs = <1>;
-			fs_entries = <16>;
-		}; 
-
-		dpni@2 {
-			options = "DPNI_OPT_HAS_KEY_MASKING";
-			num_queues = <8>;
-			num_tcs = <1>;
-			fs_entries = <16>;
-		}; 
-
-		dpmac@3 {
+			options = "";
+			num_queues = <0x1>;
+			num_tcs = <0x1>;
 		};
 
+		dpni@1 {
+			options = "";
+			num_queues = <0x1>;
+			num_tcs = <0x1>;
+		};
+
+		/* ------------ DPBP --------------*/
 		dpbp@0 {
 		};
 
 		dpbp@1 {
-		};
-
-		dpbp@2 {
 		};
 
 		dpio@0 {
@@ -116,6 +106,7 @@
 			num_priorities = <0x8>;
 		};
 
+		/* ------------ DPIO --------------*/
 		dpio@1 {
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <0x8>;
@@ -151,6 +142,7 @@
 			num_priorities = <0x8>;
 		};
 
+		/* ------------ DPMCP --------------*/
 		dpmcp@1 {
 		};
 
@@ -208,6 +200,7 @@
 		dpmcp@19 {
 		};
 
+		/* ------------ DPCON --------------*/
 		dpcon@0 {
 			num_priorities = <0x2>;
 		};
@@ -215,106 +208,15 @@
 		dpcon@1 {
 			num_priorities = <0x2>;
 		};
-
-		dpcon@2 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@3 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@4 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@5 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@6 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@7 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@8 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@9 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@10 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@11 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@12 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@13 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@14 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@15 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@16 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@17 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@18 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@19 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@20 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@21 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@22 {
-			num_priorities = <0x2>;
-		};
-
-		dpcon@23 {
-			num_priorities = <0x2>;
-		};
 	};
 
+	/*****************************************************************
+	 * Connections
+	 *****************************************************************/
 	connections {
-
 		connection@1 {
 			endpoint1 = "dpni@0";
-			endpoint2 = "dpmac@3";
-		};
-
-		connection@2 {
-			endpoint1 = "dpni@1";
-			endpoint2 = "dpni@2";
+			endpoint2 = "dpni@1";
 		};
 	};
 };
