@@ -200,8 +200,8 @@
 
 				/* ------------ DPMCPs --------------*/
 				/* Ethernet DPMCPs:
-				*  One for every DPNI, one for every DPMAC, then
-				*  one more for DPIO.
+				*  One for every DPNI, one for every DPMAC and
+				*  one for every DPIO.
 				*
 				*  Next: DPRC and restool, VFIO and possibly
 				*  others from the kernel have DPMCP requirements.
@@ -333,6 +333,37 @@
 				obj@842 {
 					obj_name="dpmcp@42";
 				};
+				obj@843 {
+					obj_name="dpmcp@43";
+				};
+				obj@844 {
+					obj_name="dpmcp@44";
+				};
+				obj@845 {
+					obj_name="dpmcp@45";
+				};
+				obj@846 {
+					obj_name="dpmcp@46";
+				};
+				obj@847 {
+					obj_name="dpmcp@47";
+				};
+				obj@848 {
+					obj_name="dpmcp@48";
+				};
+				obj@849 {
+					obj_name="dpmcp@49";
+				};
+				obj@850 {
+					obj_name="dpmcp@50";
+				};
+				obj@851 {
+					obj_name="dpmcp@51";
+				};
+				obj@852 {
+					obj_name="dpmcp@52";
+				};
+
 				/* ------------ DPIOs --------------*/
 				/* One DPIO for each online CPU. This is a
 				 * maximal configuration.
@@ -950,6 +981,26 @@
 		dpmcp@41 {
 		};
 		dpmcp@42 {
+		};
+		dpmcp@43 {
+		};
+		dpmcp@44 {
+		};
+		dpmcp@45 {
+		};
+		dpmcp@46 {
+		};
+		dpmcp@47 {
+		};
+		dpmcp@48 {
+		};
+		dpmcp@49 {
+		};
+		dpmcp@50 {
+		};
+		dpmcp@51 {
+		};
+		dpmcp@52 {
 		};
 	};
 

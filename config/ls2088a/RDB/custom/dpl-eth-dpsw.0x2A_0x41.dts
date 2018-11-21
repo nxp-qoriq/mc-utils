@@ -169,7 +169,30 @@
 				obj@719 {
 					obj_name = "dpmcp@19";
 				};
-
+				obj@720 {
+					obj_name = "dpmcp@20";
+				};
+				obj@721 {
+					obj_name = "dpmcp@21";
+				};
+				obj@722 {
+					obj_name = "dpmcp@22";
+				};
+				obj@723 {
+					obj_name = "dpmcp@23";
+				};
+				obj@724 {
+					obj_name = "dpmcp@24";
+				};
+				obj@725 {
+					obj_name = "dpmcp@25";
+				};
+				obj@726 {
+					obj_name = "dpmcp@26";
+				};
+				obj@727 {
+					obj_name = "dpmcp@27";
+				};
 				/* ------------ DPCON --------------*/
 				obj@500 {
 					obj_name = "dpcon@0";
@@ -361,7 +384,30 @@
 		dpmcp@19 {
 			compatible = "fsl,dpmcp";
 		};
-
+		dpmcp@20 {
+			compatible = "fsl,dpmcp";
+		};
+		dpmcp@21 {
+			compatible = "fsl,dpmcp";
+		};
+		dpmcp@22 {
+			compatible = "fsl,dpmcp";
+		};
+		dpmcp@23 {
+			compatible = "fsl,dpmcp";
+		};
+		dpmcp@24 {
+			compatible = "fsl,dpmcp";
+		};
+		dpmcp@25 {
+			compatible = "fsl,dpmcp";
+		};
+		dpmcp@26 {
+			compatible = "fsl,dpmcp";
+		};
+		dpmcp@27 {
+			compatible = "fsl,dpmcp";
+		};
 		/* ------------ DPCON --------------*/
 		dpcon@0 {
 			compatible = "fsl,dpcon";

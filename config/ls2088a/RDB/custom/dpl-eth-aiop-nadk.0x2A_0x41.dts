@@ -251,6 +251,30 @@
 				obj@69 {
 					obj_name = "dpmcp@29";
 				};
+				obj@72 {
+					obj_name = "dpmcp@32";
+				};
+				obj@73 {
+					obj_name = "dpmcp@33";
+				};
+				obj@74 {
+					obj_name = "dpmcp@34";
+				};
+				obj@75 {
+					obj_name = "dpmcp@35";
+				};
+				obj@76 {
+					obj_name = "dpmcp@36";
+				};
+				obj@77 {
+					obj_name = "dpmcp@37";
+				};
+				obj@78 {
+					obj_name = "dpmcp@38";
+				};
+				obj@79 {
+					obj_name = "dpmcp@39";
+				};
 			};
 		};
 
@@ -768,6 +792,22 @@
 		dpmcp@29 {
 		};
 		dpmcp@31 {
+		};
+		dpmcp@32 {
+		};
+		dpmcp@33 {
+		};
+		dpmcp@34 {
+		};
+		dpmcp@35 {
+		};
+		dpmcp@36 {
+		};
+		dpmcp@37 {
+		};
+		dpmcp@38 {
+		};
+		dpmcp@39 {
 		};
 
 		/* ------------ DPCI  --------------*/

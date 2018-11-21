@@ -88,56 +88,9 @@
 					obj_name = "dpio@1";
 				};
 
-				obj@701 {
-					obj_name = "dpmcp@1";
-				};
-
-				obj@702 {
-					obj_name = "dpmcp@2";
-				};
-
-				obj@703 {
-					obj_name = "dpmcp@3";
-				};
-
-				obj@704 {
-					obj_name = "dpmcp@4";
-				};
-
-				obj@705 {
-					obj_name = "dpmcp@5";
-				};
-
-				obj@706 {
-					obj_name = "dpmcp@6";
-				};
-
-				obj@707 {
-					obj_name = "dpmcp@7";
-				};
-
-				obj@708 {
-					obj_name = "dpmcp@8";
-				};
-
-				obj@709 {
-					obj_name = "dpmcp@9";
-				};
-
-				obj@710 {
-					obj_name = "dpmcp@10";
-				};
-
-				obj@711 {
-					obj_name = "dpmcp@11";
-				};
-
-				obj@712 {
-					obj_name = "dpmcp@12";
-				};
-
-				obj@713 {
-					obj_name = "dpmcp@13";
+				obj_set@dpmcp {
+					type = "dpmcp";
+					ids = <1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25>;
 				};
 
 				obj@800 {
@@ -239,6 +192,42 @@
 		};
 
 		dpmcp@13 {
+		};
+
+		dpmcp@14 {
+		};
+
+		dpmcp@15 {
+		};
+
+		dpmcp@16 {
+		};
+
+		dpmcp@17 {
+		};
+
+		dpmcp@18 {
+		};
+
+		dpmcp@19 {
+		};
+
+		dpmcp@20 {
+		};
+
+		dpmcp@21 {
+		};
+
+		dpmcp@22 {
+		};
+
+		dpmcp@23 {
+		};
+
+		dpmcp@24 {
+		};
+
+		dpmcp@25 {
 		};
 
 		dpcon@1 {

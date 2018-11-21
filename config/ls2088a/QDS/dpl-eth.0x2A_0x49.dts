@@ -55,8 +55,8 @@
 
 				/* ------------ DPMCPs --------------*/
 				/* Ethernet DPMCPs:
-				*  One for every DPNI, one for every DPMAC, then
-				*  one more for DPIO.
+				*  One for every DPNI, one for every DPMAC and
+				*  one for every DPIO.
 				*
 				*  Next: DPRC and restool, VFIO and possibly
 				*  others from the kernel have DPMCP requirements.
