@@ -1,6 +1,6 @@
 /*
  * Copyright 2014-2016 Freescale Semiconductor, Inc.
- * Copyright 2017 NXP
+ * Copyright 2017-2019 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -76,6 +76,10 @@
 				/* ------------ DPCON --------------*/
 				obj@500 {
 					obj_name="dpcon@0";
+				};
+
+				obj@700 {
+					obj_name = "dpseci@0";
 				};
 
 				/* ------------ DPRTC --------------*/
@@ -264,6 +268,11 @@
 		dpcon@0 {
 			compatible="fsl,dpcon";
 			num_priorities=<2>;
+		};
+
+		dpseci@0 {
+			priorities = <0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01>;
+			options = "DPSECI_OPT_HAS_CG";
 		};
 
 		/* ------------ DPRTC --------------*/
