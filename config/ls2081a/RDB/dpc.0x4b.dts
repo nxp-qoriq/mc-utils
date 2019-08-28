@@ -45,7 +45,7 @@
 			level = "LOG_LEVEL_WARNING";
 		};
 		console {
-			mode = "CONSOLE_MODE_ON";
+			mode = "CONSOLE_MODE_OFF";
 			uart_id = <3>;
 		};
 	};
@@ -54,7 +54,7 @@
 			mode = "LOG_MODE_ON";
 		};
 		console {
-			mode = "CONSOLE_MODE_ON";
+			mode = "CONSOLE_MODE_OFF";
 			uart_id = <4>;
 		};
 	};

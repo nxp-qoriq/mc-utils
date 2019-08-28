@@ -46,7 +46,7 @@
 		};
 
 		console {
-			mode = "CONSOLE_MODE_ON";
+			mode = "CONSOLE_MODE_OFF";
 			uart_id = <0x3>;
 		};
 	};
@@ -58,7 +58,7 @@
 		};
 
 		console {
-			mode = "CONSOLE_MODE_ON";
+			mode = "CONSOLE_MODE_OFF";
 			uart_id = <0x3>;
 		};
 	};
