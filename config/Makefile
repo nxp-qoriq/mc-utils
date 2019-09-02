@@ -5,7 +5,7 @@ DTC = dtc
 all: $(OBJECTS)
 
 %.dtb: %.dts
-	$(DTC) -I dts -O dtb $< -o $@
+	$(DTC) -q -I dts -O dtb $< -o $@
 
 clean:
 	-rm -rf $(OBJECTS)
