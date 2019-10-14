@@ -1241,7 +1241,7 @@
                 dpni@0 {
                         compatible = "fsl,dpni";
                         type = "DPNI_TYPE_NIC";
-                        options = "DPNI_OPT_HAS_KEY_MASKING";
+                        options = "";
                         num_queues = <16>;
                         num_tcs = <1>;
                         mac_filter_entries = <16>;
@@ -1253,7 +1253,7 @@
                 dpni@1 {
                         compatible = "fsl,dpni";
                         type = "DPNI_TYPE_NIC";
-                        options = "DPNI_OPT_HAS_KEY_MASKING";
+                        options = "";
                         num_queues = <16>;
                         num_tcs = <1>;
                         mac_filter_entries = <16>;

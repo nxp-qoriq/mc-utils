@@ -92,7 +92,7 @@
 		/* ------------ DPNI --------------*/
 		dpni@0 {
 			type = "DPNI_TYPE_NIC";
-			options = "DPNI_OPT_HAS_KEY_MASKING";
+			options = "";
 			num_queues = <0x8>;
 			num_tcs = <0x1>;
 			mac_filter_entries = <0x10>;
@@ -103,7 +103,7 @@
 
 		dpni@1 {
 			type = "DPNI_TYPE_NIC";
-			options = "DPNI_OPT_HAS_KEY_MASKING";
+			options = "";
 			num_queues = <0x8>;
 			num_tcs = <0x1>;
 			mac_filter_entries = <0x10>;
@@ -114,7 +114,7 @@
 
 		dpni@2 {
 			type = "DPNI_TYPE_NIC";
-			options = "DPNI_OPT_HAS_KEY_MASKING";
+			options = "";
 			num_queues = <0x8>;
 			num_tcs = <0x1>;
 			mac_filter_entries = <0x10>;
@@ -125,7 +125,7 @@
 
 		dpni@3 {
 			type = "DPNI_TYPE_NIC";
-			options = "DPNI_OPT_HAS_KEY_MASKING";
+			options = "";
 			num_queues = <0x8>;
 			num_tcs = <0x1>;
 			mac_filter_entries = <0x10>;
@@ -136,7 +136,7 @@
 
 		dpni@8 {
 			type = "DPNI_TYPE_NIC";
-			options = "DPNI_OPT_HAS_KEY_MASKING";
+			options = "";
 			num_queues = <0x8>;
 			num_tcs = <0x1>;
 			mac_filter_entries = <0x10>;
@@ -147,7 +147,7 @@
 
 		dpni@9 {
 			type = "DPNI_TYPE_NIC";
-			options = "DPNI_OPT_HAS_KEY_MASKING";
+			options = "";
 			num_queues = <0x8>;
 			num_tcs = <0x1>;
 			mac_filter_entries = <0x10>;

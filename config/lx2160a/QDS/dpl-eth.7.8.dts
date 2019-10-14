@@ -87,7 +87,7 @@
 
 		/* ------------ DPNI --------------*/
 		dpni@0 {
-			options = "DPNI_OPT_HAS_KEY_MASKING";
+			options = "";
 			num_queues = <0x10>;
 			num_tcs = <0x1>;
 		};
