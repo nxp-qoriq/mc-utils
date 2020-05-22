@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 NXP
+ * Copyright 2020 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -26,8 +26,7 @@
  */
 
 /*
- * This DPL showcases one Linux configuration for SerDes protocol 20 with
- * backplane support: 2 x 40G
+ * Data Path Layout for lx2162aqds boards featuring Serdes1 protocol 20.
  */
 
 /dts-v1/;
