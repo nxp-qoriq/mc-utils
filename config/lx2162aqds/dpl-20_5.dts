@@ -44,14 +44,14 @@
 				/* ------------ DPNIs --------------*/
 				obj_set@dpni {
 					type = "dpni";
-					ids = <0x0>;
+					ids = <0x0 0x1 0x2>;
 				};
 
 
 				/* ------------ DPMACs --------------*/
 				obj_set@dpmac {
 					type = "dpmac";
-					ids = <0x1>;
+					ids = <0x1 0x11 0x12>;
 				};
 
 
@@ -93,10 +93,27 @@
 			num_queues = <0x10>;
 			num_tcs = <0x1>;
 		};
+		
+		dpni@1 {
+			options = "";
+			num_queues = <0x10>;
+			num_tcs = <0x1>;
+		};
+		
+		dpni@2 {
+			options = "";
+			num_queues = <0x10>;
+			num_tcs = <0x1>;
+		};
 
 		dpmac@1 {
 		};
 		
+		dpmac@17 {
+		};
+		
+		dpmac@18 {
+		};
 		
 		/* ------------ DPBP --------------*/
 		dpbp@0 {
@@ -432,6 +449,16 @@
 		connection@1 {
 			endpoint1 = "dpni@0";
 			endpoint2 = "dpmac@1";
+		};
+		
+		connection@2 {
+			endpoint1 = "dpni@1";
+			endpoint2 = "dpmac@17";
+		};
+		
+		connection@3 {
+			endpoint1 = "dpni@2";
+			endpoint2 = "dpmac@18";
 		};
 	};
 };

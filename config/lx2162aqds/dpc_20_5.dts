@@ -75,6 +75,14 @@
 			mac@1 {
 				link_type = "MAC_LINK_TYPE_FIXED";
 			};
+			
+			mac@17 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
+			
+			mac@18 {
+				link_type = "MAC_LINK_TYPE_PHY";
+			};
 		};
 	};
 };
