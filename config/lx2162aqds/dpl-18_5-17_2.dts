@@ -65,7 +65,7 @@
 				/* -------------- DPMACs --------------*/
 				obj_set@dpmac {
 					type = "dpmac";
-					ids = <3 4 5 6 >;
+					ids = <3 4 5 6 17 18>;
 				};
 
 				/* -------------- DPMCPs --------------*/
@@ -77,7 +77,7 @@
 				/* -------------- DPNIs --------------*/
 				obj_set@dpni {
 					type = "dpni";
-					ids = <0 1 2 3 >;
+					ids = <0 1 2 3 4 5>;
 				};
 
 				/* -------------- DPRTCs --------------*/
@@ -547,6 +547,14 @@
 		dpmac@6 {
 			compatible = "fsl,dpmac";
 		};
+		
+		dpmac@17 {
+			compatible = "fsl,dpmac";
+		};
+		
+		dpmac@18 {
+			compatible = "fsl,dpmac";
+		};
 
 		dpmcp@1 {
 			compatible = "fsl,dpmcp";
@@ -720,6 +728,30 @@
 			qos_entries = <0>;
 		};
 
+		dpni@4 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			num_queues = <16>;
+			num_tcs = <1>;
+			num_cgs = <1>;
+			mac_filter_entries = <16>;
+			vlan_filter_entries = <0>;
+			fs_entries = <64>;
+			qos_entries = <0>;
+		};
+		
+		dpni@5 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			num_queues = <16>;
+			num_tcs = <1>;
+			num_cgs = <1>;
+			mac_filter_entries = <16>;
+			vlan_filter_entries = <0>;
+			fs_entries = <64>;
+			qos_entries = <0>;
+		};
+
 		dprtc@0 {
 			compatible = "fsl,dprtc";
 		};
@@ -753,6 +785,16 @@
 		connection@4{
 			endpoint1 = "dpni@3";
 			endpoint2 = "dpmac@6";
+		};
+		
+		connection@5{
+			endpoint1 = "dpni@4";
+			endpoint2 = "dpmac@17";
+		};
+		
+		connection@6{
+			endpoint1 = "dpni@5";
+			endpoint2 = "dpmac@18";
 		};
 	};
 };
