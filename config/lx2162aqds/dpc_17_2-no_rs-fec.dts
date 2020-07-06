@@ -74,22 +74,22 @@
 		ports {
 			mac@3 {
 				link_type = "MAC_LINK_TYPE_FIXED";
-				fec_mode = "none"
+				fec_mode = "none";
 			};
 
 			mac@4 {
 				link_type = "MAC_LINK_TYPE_FIXED";
-				fec_mode = "none"
+				fec_mode = "none";
 			};
 
 			mac@5 {
 				link_type = "MAC_LINK_TYPE_FIXED";
-				fec_mode = "none"
+				fec_mode = "none";
 			};
 
 			mac@6 {
 				link_type = "MAC_LINK_TYPE_FIXED";
-				fec_mode = "none"
+				fec_mode = "none";
 			};
 			
 			mac@17 {
