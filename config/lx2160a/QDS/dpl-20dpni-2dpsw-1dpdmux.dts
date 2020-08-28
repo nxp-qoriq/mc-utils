@@ -106,182 +106,162 @@
 
 		/* ------------ DPNI --------------*/
 		dpni@0 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
-			num_tcs = <0x1>; /* was 8; temporary reduce it to allow dpdmux creation */
+			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@1 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@2 {
-			options = "DPNI_OPT_SHARED_HASH_KEY";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x10>;
 			qos_entries = <0x8>;
 			fs_entries = <0x20>;
-			dist_key_size = <24>;
 		};
 
 		dpni@3 {
-			options = "DPNI_OPT_SHARED_HASH_KEY";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x10>;
 			qos_entries = <0x8>;
 			fs_entries = <0x20>;
-			dist_key_size = <24>;
 		};
 
 		dpni@4 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@5 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@6 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x10>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@7 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@8 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x3>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@9 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x10>;
 			qos_entries = <0x8>;
 			fs_entries = <0x10>;
-			dist_key_size = <24>;
 		};
 
 		dpni@10 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x2>;
 			qos_entries = <0x8>;
 			fs_entries = <0x9>;
-			dist_key_size = <24>;
 		};
 
 		dpni@11 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x2>;
 			qos_entries = <0x8>;
 			fs_entries = <0x9>;
-			dist_key_size = <24>;
 		};
 
 		dpni@12 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x2>;
 			qos_entries = <0x8>;
 			fs_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@13 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_HAS_KEY_MASKING", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			mac_filter_entries = <0x2>;
 			qos_entries = <0x8>;
 			fs_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@14 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@15 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER","DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER","DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@16 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
 			fs_entries = <0x16>;
-			dist_key_size = <24>;
 		};
 
 		dpni@17 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x10>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
 			fs_entries = <0x16>;
-			dist_key_size = <24>;
 		};
 
 		dpni@18 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		dpni@19 {
-			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS";
+			options = "DPNI_OPT_SHARED_HASH_KEY", "DPNI_OPT_NO_MAC_FILTER", "DPNI_OPT_NO_FS", "DPNI_OPT_SHARED_FS";
 			num_queues = <0x1>;
 			num_tcs = <0x8>;
 			qos_entries = <0x8>;
-			dist_key_size = <24>;
 		};
 
 		/* ------------ DPDMUX ------------*/
