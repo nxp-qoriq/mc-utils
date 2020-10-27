@@ -457,7 +457,7 @@
 
 		connection@2 {
 			endpoint1 = "dpni@1";
-			endpoint2 = "dpmac@3";
+			endpoint2 = "dpmac@5";
 		};
 
 	};
