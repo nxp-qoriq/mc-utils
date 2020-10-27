@@ -1,5 +1,5 @@
 /*
-* Copyright 2018 NXP
+* Copyright 2018, 2020 NXP
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are met:
@@ -83,9 +83,6 @@
 			};
 
 			mac@17 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
-			mac@18 {
 				link_type = "MAC_LINK_TYPE_PHY";
 			};
 		};

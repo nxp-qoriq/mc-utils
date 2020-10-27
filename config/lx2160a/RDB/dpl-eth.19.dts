@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 NXP
+ * Copyright 2018-2020 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -47,7 +47,7 @@
 				/* ------------ DPMACs --------------*/
 				obj_set@dpmac {
 					type = "dpmac";
-					ids = <0x2 0x3 0x4 0x5 0x6 0x11 0x12>;
+					ids = <0x2 0x3 0x4 0x5 0x6 0x11>;
 				};
 
 
@@ -123,9 +123,6 @@
 		};
 
 		dpmac@17 {
-		};
-
-		dpmac@18 {
 		};
 
 		/* ------------ DPBP --------------*/
