@@ -61,6 +61,7 @@
 	controllers {
 
 		qbman {
+			total_bman_buffers = <0x9EB100>;
 			/* Transform this number of 8-WQ channels into four times
 			 * as many 2-WQ channels. This allows the creation of a
 			 * larger number of DPCONs.
