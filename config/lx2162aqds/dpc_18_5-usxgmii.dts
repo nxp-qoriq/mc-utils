@@ -73,12 +73,10 @@
 	board_info {
 		ports {
 			mac@3 {
-				link_type = "MAC_LINK_TYPE_PHY";
 				enet_if = "USXGMII";
 			};
 
 			mac@4 {
-				link_type = "MAC_LINK_TYPE_PHY";
 				enet_if = "USXGMII";
 			};
 
