@@ -60,7 +60,7 @@
 				/* ------------ DPIOs --------------*/
 				obj_set@dpio {
 					type = "dpio";
-					ids = <0x0 0x1 0x2 0x3 0x4 0x5 0x6 0x7 0x8 0x9 0xa 0xb 0xc 0xd 0xe 0xf>;
+					ids = <0x0 0x1 0x2 0x3 0x4 0x5 0x6 0x7>; 
 				};
 
 				/* ------------ DPMCPs --------------*/
@@ -153,46 +153,6 @@
 		};
 
 		dpio@7 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@8 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@9 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@10 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@11 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@12 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@13 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@14 {
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <0x8>;
-		};
-
-		dpio@15 {
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <0x8>;
 		};
