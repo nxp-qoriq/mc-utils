@@ -1,5 +1,5 @@
 /*
-* Copyright 2018 NXP
+* Copyright 2018, 2024 NXP
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are met:
@@ -74,9 +74,6 @@
 
 	board_info {
 		ports {
-			mac@2 {
-				link_type = "MAC_LINK_TYPE_NONE";
-			};
 			mac@17 {
 				link_type = "MAC_LINK_TYPE_PHY";
 			};
