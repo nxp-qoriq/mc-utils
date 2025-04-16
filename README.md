@@ -31,3 +31,20 @@ the following command can be run:
 ```bash
 [~/mc-utils] $ make -C config/
 ```
+
+## Build Options
+
+The `Makefile` supports two customizations:
+
+- `DTC`: Specify the path to the Device Tree Compiler (DTC).
+- `SOURCES`: Provide an external set of Device Tree Source (DTS) files,
+  which should be space-separated.
+
+For instance, to build with a specific DTC path and external DTS files, you can run:
+
+```bash
+[~/mc-utils] $ make DTC=/dev/br_build/host/bin/dtc SOURCES="path1/file1.dts path2/file2.dts" -C config/
+```
+
+In this example, the `make` command is used to specify the path to the DTC and include
+additional DTS files from the specified paths.
